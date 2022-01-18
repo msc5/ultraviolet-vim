@@ -26,27 +26,22 @@ let g:ultraviolet_italics = 1
 let g:ulraviolet_bold = 1
 
 " Color Palette
-" Color Palette
-" Color Palette
-" Color Palette
-" Color Palette
 let s:gray1     = '#0b0b14'
-let s:gray2     = '#1b202a'
-" let s:gray3     = '#1b202a'
+let s:gray2     = '#13131f'
 let s:gray3     = '#191830'
-" let s:gray4     = '#3b4c73'
-" let s:gray4     = '#324775'
-" let s:gray4     = '#2b3480'
 let s:gray4     = '#292e5e'
 let s:gray5     = '#777cb8'
 let s:red       = '#cf516a'
-let s:green     = '#7ee698'
-let s:yellow    = '#ffe380'
-let s:blue      = '#668cff'
-let s:purple    = '#b37dff'
-let s:cyan      = '#28e0c8'
+let s:green     = '#5eff87'
+let s:yellow    = '#ffcb47'
+let s:blue      = '#6181ff'
+let s:lightblue = '#1cd2ff'
+let s:purple    = '#a363ff'
+let s:violet    = '#f569ff'
+let s:cyan      = '#22f5d9'
 let s:orange    = '#e87946'
-let s:pink      = '#c47ebd'
+let s:salmon    = '#ff6190'
+let s:pink      = '#ff61cd'
 
 function! s:HL(group, fg, bg, attr)
 	let l:attr = a:attr
@@ -81,7 +76,7 @@ call s:HL('FoldColumn',                 s:cyan,                s:gray1,  '')
 call s:HL('SignColumn',                 s:gray2,               s:gray1,  '')
 call s:HL('LineNr',                     s:gray3,               '',       '')
 call s:HL('CursorLineNr',               s:gray5,               s:gray2,  'none')
-call s:HL('MatchParen',                 s:pink,                s:gray1,  'bold')
+call s:HL('MatchParen',                 s:salmon,                s:gray1,  'bold')
 call s:HL('ModeMsg',                    s:green,               '',       '')
 call s:HL('MoreMsg',                    s:green,               '',       '')
 call s:HL('NonText',                    s:gray4,               '',       '')
@@ -106,23 +101,23 @@ call s:HL('WarningMsg',                 s:red,                 '',       '')
 call s:HL('WildMenu',                   s:gray2,               s:blue,   '')
 
 " Standard Syntax
-call s:HL('Comment',                    s:gray4,               '',       'italic')
-call s:HL('Constant',                   s:red,                 '',       '')
-call s:HL('String',                     s:green,               '',       '')
-call s:HL('Character',                  s:green,               '',       '')
-call s:HL('Identifier',                 s:purple,              '',       'none')
-call s:HL('Function',                   s:cyan,                '',       '')
-call s:HL('Statement',                  s:blue,                '',       'none')
-call s:HL('Operator',                   s:cyan,                '',       'none')
-call s:HL('PreProc',                    s:cyan,                '',       '')
-call s:HL('Define',                     s:blue,                '',       '')
-call s:HL('Macro',                      s:blue,                '',       '')
-call s:HL('Type',                       s:orange,              '',       'none')
-call s:HL('Structure',                  s:blue,                '',       '')
-call s:HL('Special',                    s:cyan,                '',       '')
-call s:HL('Underlined',                 s:blue,                '',       'none')
-call s:HL('Error',                      s:red,                 s:gray1,  'bold')
-call s:HL('Todo',                       s:pink,                s:gray1,  'bold')
+call s:HL('Comment',                    s:gray4,      '',        'italic')
+call s:HL('Constant',                   s:red,        '',        '')
+call s:HL('String',                     s:violet,     '',       '')
+call s:HL('Character',                  s:yellow,     '',       '')
+call s:HL('Identifier',                 s:purple,     '',        'none')
+call s:HL('Function',                   s:lightblue,  '',   '')
+call s:HL('Statement',                  s:blue,       '',        'none')
+call s:HL('Operator',                   s:cyan,       '',        'none')
+call s:HL('PreProc',                    s:green,      '',       '')
+call s:HL('Define',                     s:blue,       '',        '')
+call s:HL('Macro',                      s:blue,       '',        '')
+call s:HL('Type',                       s:orange,     '',        'none')
+call s:HL('Structure',                  s:cyan,       '',        '')
+call s:HL('Special',                    s:cyan,       '',        '')
+call s:HL('Underlined',                 s:blue,       '',        'none')
+call s:HL('Error',                      s:red,        s:gray1,   'bold')
+call s:HL('Todo',                       s:salmon,     s:gray1, 'bold')
 
 " CSS/Sass/Less
 call s:HL('cssAttrComma',               s:green,               '',       '')
