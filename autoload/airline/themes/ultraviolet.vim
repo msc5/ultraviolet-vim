@@ -1,22 +1,35 @@
-" Ultraviolet Color theme
-" Author: Matthew Coleman
-" License: MIT
+
+"  ___  ___  ___   _________  ________  ________  ___      ___ ___  ________  ___       _______  _________
+" |\  \|\  \|\  \ |\___   ___\\   __  \|\   __  \|\  \    /  /|\  \|\   __  \|\  \     |\  ___ \|\___   ___\
+" \ \  \\\  \ \  \\|___ \  \_\ \  \|\  \ \  \|\  \ \  \  /  / | \  \ \  \|\  \ \  \    \ \   __/\|___ \  \_|
+"  \ \  \\\  \ \  \    \ \  \ \ \   _  _\ \   __  \ \  \/  / / \ \  \ \  \\\  \ \  \    \ \  \_|/__  \ \  \
+"   \ \  \\\  \ \  \____\ \  \ \ \  \\  \\ \  \ \  \ \    / /   \ \  \ \  \\\  \ \  \____\ \  \_|\ \  \ \  \
+"    \ \_______\ \_______\ \__\ \ \__\\ _\\ \__\ \__\ \__/ /     \ \__\ \_______\ \_______\ \_______\  \ \__\
+"     \|_______|\|_______|\|__|  \|__|\|__|\|__|\|__|\|__|/       \|__|\|_______|\|_______|\|_______|   \|__|
+
+" Author:	Matthew Coleman
+" File:		ultraviolet.vim
+" Maintainer:	msc5 <msc5.coleman@gmail.com>
+" Modified:	2022-01-06
+" License:	MIT
 
 " Color Palette
 let s:gray1     = '#0b0b14'
-let s:gray2     = '#1b202a'
-let s:gray3     = '#1b202a'
-let s:gray4     = '#3b4c73'
+let s:gray2     = '#13131f'
+let s:gray3     = '#191830'
+let s:gray4     = '#292e5e'
 let s:gray5     = '#777cb8'
 let s:red       = '#cf516a'
-let s:green     = '#7ee698'
-let s:yellow    = '#ffe380'
-let s:blue      = '#668cff'
-let s:purple    = '#b37dff'
-let s:cyan      = '#28e0c8'
+let s:green     = '#5eff87'
+let s:yellow    = '#ffcb47'
+let s:blue      = '#6181ff'
+let s:lightblue = '#1cd2ff'
+let s:purple    = '#a363ff'
+let s:violet    = '#f569ff'
+let s:cyan      = '#22f5d9'
 let s:orange    = '#e87946'
-let s:pink      = '#c47ebd'
-
+let s:salmon    = '#ff6190'
+let s:pink      = '#ff61cd'
 
 let g:airline#themes#ultraviolet#palette = {}
 
@@ -61,12 +74,3 @@ let g:airline#themes#ultraviolet#palette.commandline = airline#themes#generate_c
 
 " Readonly status
 let g:airline#themes#ultraviolet#palette.accents = {'red': [s:red, '', 132, '']}
-
-" Ctrlp
-if !get(g:, 'loaded_ctrlp', 0)
-	finish
-endif
-let g:airline#themes#ultraviolet#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-			\ ['#9aa7bd', '#323c4d', 248, 237, ''],
-			\ ['#b3785d', '#232936', 137, 235, ''],
-			\ ['#232936', '#b3785d', 235, 137, 'bold'])

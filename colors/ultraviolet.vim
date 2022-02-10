@@ -31,7 +31,7 @@ let s:gray2     = '#13131f'
 let s:gray3     = '#191830'
 let s:gray4     = '#292e5e'
 let s:gray5     = '#777cb8'
-let s:red       = '#cf516a'
+let s:red       = '#ff6759'
 let s:green     = '#5eff87'
 let s:yellow    = '#ffcb47'
 let s:blue      = '#6181ff'
@@ -39,9 +39,8 @@ let s:lightblue = '#1cd2ff'
 let s:purple    = '#a363ff'
 let s:violet    = '#f569ff'
 let s:cyan      = '#22f5d9'
-let s:orange    = '#e87946'
+let s:orange    = '#ff954a'
 let s:salmon    = '#ff6190'
-let s:pink      = '#ff61cd'
 
 function! s:HL(group, fg, bg, attr)
 	let l:attr = a:attr
@@ -71,11 +70,11 @@ call s:HL('DiffDelete',                 s:gray3,               s:red,    'none')
 call s:HL('DiffText',                   s:gray3,               s:blue,   'none')
 call s:HL('ErrorMsg',                   s:red,                 s:gray1,  'bold')
 call s:HL('VertSplit',                  s:gray4,               s:gray1,  'none')
-call s:HL('Folded',                     s:gray3,               s:gray1,  '')
+call s:HL('Folded',                     s:yellow,               s:gray1,  '')
 call s:HL('FoldColumn',                 s:cyan,                s:gray1,  '')
 call s:HL('SignColumn',                 s:gray2,               s:gray1,  '')
 call s:HL('LineNr',                     s:gray3,               '',       '')
-call s:HL('CursorLineNr',               s:gray5,               s:gray2,  'none')
+call s:HL('CursorLineNr',               s:cyan,               s:gray2,  'none')
 call s:HL('MatchParen',                 s:salmon,                s:gray1,  'bold')
 call s:HL('ModeMsg',                    s:green,               '',       '')
 call s:HL('MoreMsg',                    s:green,               '',       '')
@@ -210,7 +209,7 @@ call s:HL('SyntasticErrorSign',         s:red,                 '',       '')
 call s:HL('SyntasticWarningSign',       s:orange,              '',       '')
 
 " Startify
-call s:HL('StartifyHeader',             s:cyan,                '',       '')
+call s:HL('StartifyHeader',             s:lightblue,                '',       '')
 
 if has("nvim") && exists("&termguicolors") && &termguicolors
 	let g:terminal_color_0  = "#1b202a"
